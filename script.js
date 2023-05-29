@@ -1,54 +1,52 @@
-if (localStorage.getItem('collection')) {
-  
-    collection = JSON.parse(localStorage.getItem('collection'));
-    displayBooks(collection);
-  } else {
-    collection = [];
-  }
-  
-  const button = document.getElementById('submit');
-  
-  function addBooks(title, author) {
-    collection.push({ title, author });
-  }
-  
-  button.addEventListener('click', () => {
-    let author = document.getElementById('author').value;
-    let title = document.getElementById('title').value;
-  
-    addBooks(title, author);
-    localStorage.setItem('collection', JSON.stringify(collection));
- 
-  });
-  console.log(collection)
+let collection = [
+  {
+    title: 'Lorem Ipsum',
+    author: 'Testero Testyy',
+  },
+  {
+    title: 'Second Book',
+    author: 'Testero Testyy',
+  },
+];
 
-function displayBooks(collection){
-  // const bookElement = document.getElementById("container");
-  // bookElement.innerHTML = collection.map((book, index) =>
-  // `<div>
-  //     <p>${book.title}</p>
-  //     <p>${book.author}</p>
-  //     <button onclick="deleteBooks(${index})" id="remove" >remove</button>
-  //   </div>
-  //   <hr><br>`
-  // )
-  // .join('');
-  collection.forEach((book, index) => {
-    const bookElement = document.createElement('div');
-    bookElement.innerHTML = `<p>Title: ${book.title}</p><p>Author: ${book.author}</p>`;
-
-    const deleteButton = document.createElement('button');
-    deleteButton.textContent = 'Delete';
-    deleteButton.addEventListener('click', () => {
-      deleteBooks(index);
-      displayBooks(); // Refresh the display after deletion
-    });
-
-    bookElement.appendChild(deleteButton);
-    document.getElementById('container').appendChild(bookElement);
+function addBooks(title, author) {
+  collection.push({
+    title,
+    author,
   });
 }
 
-function deleteBooks(index){
+function displayBooks(collection) {
+  const bookSection = document.querySelector('.books');
+  bookSection.innerHTML = collection.map((book, index) => `
+    <div>
+        <p>${book.title}</p>
+        <p>${book.author}</p>
+        <button type="button" onclick="deleteBooks(${index})" id="remove" >remove</button>
+        <hr>
+    </div>
+    `).join('');
+}
+/* eslint-disable no-unused-vars */
+function deleteBooks(index) {
   collection.splice(index, 1);
+  displayBooks(collection);
+  localStorage.setItem('collection', JSON.stringify(collection));
+}
+
+function logSubmit(event) {
+  const bookTitle = document.querySelector('#book-title').value;
+  const bookAuthor = document.querySelector('#book-author').value;
+  addBooks(bookTitle, bookAuthor);
+  displayBooks(collection);
+  localStorage.setItem('collection', JSON.stringify(collection));
+  event.preventDefault();
+}
+
+document.querySelector('#submit-button').addEventListener('submit', (e) => logSubmit(e));
+if (localStorage.getItem('collection') !== null) {
+  collection = JSON.parse(localStorage.getItem('collection'));
+  displayBooks(collection);
+} else {
+  displayBooks(collection);
 }
