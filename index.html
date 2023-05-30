@@ -11,22 +11,26 @@
     <body>
         <div class="container">
             <div class="title">
-                <h1>Awesome Books</h1>
+                <h1 class="text-center p-4">All Awesome Books</h1>
             </div>
-            <div class="books">
-            </div>
-            <!-- <table class="table table-striped">
+           <div class="row justify-content-center">
+            <table class="table table-striped  col-6">
                 <tbody class="books">
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td></td>
+                    
                 </tbody>
-             </table> -->
-            <form action="" id="formID">
-                <input type="text" placeholder="Title" id="book-title" required><br><br>
-                <input type="text" placeholder="Author" id="book-author" required><br><br>
-                <button type="submit" id="submit-button" onclick="logSubmit(event)">Add</button>
+             </table> 
+           </div>
+           <hr>
+           <h2 class="text-center m-3">Add a new Book</h2>
+          <div class="row justify-content-center">
+           
+            <form action="" id="formID" class="pb-5">
+                <input type="text"  placeholder="Title"  id="book-title" required><br><br>
+                <input type="text" placeholder="Author"  id="book-author" required><br><br>
+                <button type="submit" id="submit-button" class="btn btn-primary" onclick="logSubmit(event)">Add</button>
             </form>
+          </div>
+            
         </div>
         <script src="script.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

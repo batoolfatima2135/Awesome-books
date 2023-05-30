@@ -15,10 +15,9 @@ class bookList {
     const bookSection = document.querySelector('.books');
     bookSection.innerHTML = collection.map((book, index) => `
       <tr>
-          <td>${book.title}</td>
-          <td>${book.author}</td>
-          <td><button type="button" onclick="deleteBooks(${index})" id="remove" >remove</button></td>
-          <hr>
+          <td>"${book.title}" by ${book.author}</td>
+          <td><button type="button" class="btn btn-primary" onclick="deleteBooks(${index})" id="remove" >remove</button></td>
+          
       </tr>
       `).join('');
   }

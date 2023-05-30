@@ -1,3 +1,7 @@
 .formID {
   display: flex;
 }
+.btn-primary
+{
+  float: right;
+}
