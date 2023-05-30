@@ -14,12 +14,12 @@ class bookList {
   displayBooks(collection) {
     const bookSection = document.querySelector('.books');
     bookSection.innerHTML = collection.map((book, index) => `
-      <div>
-          <p>${book.title}</p>
-          <p>${book.author}</p>
-          <button type="button" onclick="deleteBooks(${index})" id="remove" >remove</button>
+      <tr>
+          <td>${book.title}</td>
+          <td>${book.author}</td>
+          <td><button type="button" onclick="deleteBooks(${index})" id="remove" >remove</button></td>
           <hr>
-      </div>
+      </tr>
       `).join('');
   }
   /* eslint-disable no-unused-vars */
@@ -55,7 +55,5 @@ document.querySelector('#submit-button').addEventListener('submit', (e) => logSu
 const newBook = new bookList();
 if (localStorage.getItem('collection') !== null) {
   collection = JSON.parse(localStorage.getItem('collection'));
-  newBook.displayBooks(collection);
-} else {
   newBook.displayBooks(collection);
 }
