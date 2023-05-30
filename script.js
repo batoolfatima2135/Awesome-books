@@ -1,16 +1,15 @@
-
 class bookList {
-  constructor()
-  {
+  constructor() {
     this.collection = [];
-
   }
+
   addBooks(title, author) {
     collection.push({
       title,
       author,
     });
   }
+
   displayBooks(collection) {
     const bookSection = document.querySelector('.books');
     bookSection.innerHTML = collection.map((book, index) => `
@@ -21,26 +20,21 @@ class bookList {
       </tr>
       `).join('');
   }
-  /* eslint-disable no-unused-vars */
-    deleteBooks(index) {
-    collection.splice(index, 1);
-    
-  }
-  
 
+  /* eslint-disable no-unused-vars */
+  deleteBooks(index) {
+    collection.splice(index, 1);
+  }
 }
 
-
-function deleteBooks(index)
-{
+function deleteBooks(index) {
   const book = new bookList();
   book.deleteBooks(index);
   book.displayBooks(collection);
   localStorage.setItem('collection', JSON.stringify(collection));
 }
 
-
- function  logSubmit(event) {
+function logSubmit(event) {
   const bookTitle = document.querySelector('#book-title').value;
   const bookAuthor = document.querySelector('#book-author').value;
   const newBook = new bookList();
