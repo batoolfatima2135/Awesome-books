@@ -61,9 +61,11 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Displaying Books**
-- **Adding Books**
-- **Deleting Books**
+- **Utilizing JavaScript classes**
+- **Establishing class methods for adding and removing books**
+- **Ensure that all the original functionalities of the application are preserved**
+- **Using plain JavaScript without libraries or frameworks**
+- **Applying CSS styles to the application to align it with the provided wireframe design.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -159,8 +161,9 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Add Styling**
-- [ ] **Add Layout**
+- [ ] **Add a nav bar**
+- [ ] **Add content sections that inlude: Books list, Add book form, Contact info**
+- [ ] **Ensure that clicking on any of the links results in the main area dynamically displaying only one of the three content sections mentioned above.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -175,13 +178,13 @@ Feel free to check the [issues page](https://github.com/batoolfatima2135/Awesome
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project, kindly give it a star.
+If you like this project, kindly give it a star.⭐
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse and my coding partner for helping with this project
+I would like to thank Microverse and my coding partner for helping me with this project
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
