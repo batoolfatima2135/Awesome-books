@@ -39,12 +39,13 @@ function deleteBooks(index) {
 }
 
 function logSubmit(event) {
-  const bookTitle = document.querySelector('#book-title').value;
-  const bookAuthor = document.querySelector('#book-author').value;
+  let bookTitle = document.querySelector('#book-title').value;
+  let bookAuthor = document.querySelector('#book-author').value;
   const newBook = new BookList();
   newBook.addBooks(bookTitle, bookAuthor);
   newBook.displayBooks();
-
+  bookTitle = null;
+  bookAuthor = null;
   event.preventDefault();
 }
 
@@ -52,10 +53,32 @@ document.querySelector('#submit-button').addEventListener('submit', (e) => logSu
 const newBook = new BookList();
 newBook.displayBooks();
 
-//Getting date and time
-dateTime = document.getElementById('date');
-var currentDate = new Date();
-var date = currentDate.toDateString();
-var time = currentDate.toLocaleTimeString();
-dateTime.innerHTML = date +" " + time
+// Getting date and time
+const dateTime = document.getElementById('date');
+const currentDate = new Date();
+const date = currentDate.toDateString();
+const time = currentDate.toLocaleTimeString();
+dateTime.innerHTML = `${date} ${time}`;
 
+// navigation links
+const myLinksContainer = document.getElementById('list');
+const addContainer = document.getElementById('new');
+const contactContainer = document.getElementById('contact');
+const list = document.getElementById('book-list');
+const bookForm = document.getElementById('book-form');
+const contactInfo = document.getElementById('contact-info');
+myLinksContainer.addEventListener('click', (e) => {
+  bookForm.style.display = 'none';
+  contactInfo.style.display = 'none';
+  list.style.display = 'block';
+});
+addContainer.addEventListener('click', (e) => {
+  list.style.display = 'none';
+  contactInfo.style.display = 'none';
+  bookForm.style.display = 'block';
+});
+contactContainer.addEventListener('click', (e) => {
+  bookForm.style.display = 'none';
+  list.style.display = 'none';
+  contactInfo.style.display = 'block';
+});
