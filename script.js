@@ -39,12 +39,12 @@ function deleteBooks(index) {
 }
 
 function logSubmit(event) {
-  let bookTitle = document.querySelector('#book-title').value;
-  let bookAuthor = document.querySelector('#book-author').value;
+  const bookTitle = document.querySelector('#book-title').value;
+  const bookAuthor = document.querySelector('#book-author').value;
   const newBook = new BookList();
   newBook.addBooks(bookTitle, bookAuthor);
   newBook.displayBooks();
-  document.querySelector('#book-title').value = ''; 
+  document.querySelector('#book-title').value = '';
   document.querySelector('#book-author').value = '';
   event.preventDefault();
 }
@@ -71,26 +71,23 @@ myLinksContainer.addEventListener('click', (e) => {
   bookForm.style.display = 'none';
   contactInfo.style.display = 'none';
   list.style.display = 'block';
-  addContainer.classList.remove("active");
-  contactContainer.classList.remove("active");
-  myLinksContainer.classList.add("active");
-
-
+  addContainer.classList.remove('active');
+  contactContainer.classList.remove('active');
+  myLinksContainer.classList.add('active');
 });
 addContainer.addEventListener('click', (e) => {
   list.style.display = 'none';
   contactInfo.style.display = 'none';
   bookForm.style.display = 'block';
-  myLinksContainer.classList.remove("active");
-  contactContainer.classList.remove("active");
-  addContainer.classList.add("active");
-
+  myLinksContainer.classList.remove('active');
+  contactContainer.classList.remove('active');
+  addContainer.classList.add('active');
 });
 contactContainer.addEventListener('click', (e) => {
   bookForm.style.display = 'none';
   list.style.display = 'none';
   contactInfo.style.display = 'block';
-  addContainer.classList.remove("active");
-  myLinksContainer.classList.remove("active");
-  contactContainer.classList.add("active");
+  addContainer.classList.remove('active');
+  myLinksContainer.classList.remove('active');
+  contactContainer.classList.add('active');
 });
