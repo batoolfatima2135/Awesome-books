@@ -44,8 +44,8 @@ function logSubmit(event) {
   const newBook = new BookList();
   newBook.addBooks(bookTitle, bookAuthor);
   newBook.displayBooks();
-  bookTitle = null;
-  bookAuthor = null;
+  document.querySelector('#book-title').value = ''; 
+  document.querySelector('#book-author').value = '';
   event.preventDefault();
 }
 
@@ -71,14 +71,26 @@ myLinksContainer.addEventListener('click', (e) => {
   bookForm.style.display = 'none';
   contactInfo.style.display = 'none';
   list.style.display = 'block';
+  addContainer.classList.remove("active");
+  contactContainer.classList.remove("active");
+  myLinksContainer.classList.add("active");
+
+
 });
 addContainer.addEventListener('click', (e) => {
   list.style.display = 'none';
   contactInfo.style.display = 'none';
   bookForm.style.display = 'block';
+  myLinksContainer.classList.remove("active");
+  contactContainer.classList.remove("active");
+  addContainer.classList.add("active");
+
 });
 contactContainer.addEventListener('click', (e) => {
   bookForm.style.display = 'none';
   list.style.display = 'none';
   contactInfo.style.display = 'block';
+  addContainer.classList.remove("active");
+  myLinksContainer.classList.remove("active");
+  contactContainer.classList.add("active");
 });
