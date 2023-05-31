@@ -61,11 +61,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Utilizing JavaScript classes**
-- **Establishing class methods for adding and removing books**
-- **Ensure that all the original functionalities of the application are preserved**
-- **Using plain JavaScript without libraries or frameworks**
-- **Applying CSS styles to the application to align it with the provided wireframe design.**
+- **Adding navigation**
+- **Adding three sections: List, Add book and Contact**
+- **Ensuring that clicking on any of the links results in the main area dynamically displaying only one of the three content sections mentioned above.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -161,9 +159,8 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Add a nav bar**
-- [ ] **Add content sections that inlude: Books list, Add book form, Contact info**
-- [ ] **Ensure that clicking on any of the links results in the main area dynamically displaying only one of the three content sections mentioned above.**
+- [ ] **Add more styling**
+- [ ] **Add JavaScript Animations**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

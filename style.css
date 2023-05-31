@@ -5,3 +5,33 @@
 .btn-primary {
   float: right;
 }
+
+.nav-add {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#book-form {
+  display: none;
+}
+
+#contact-info {
+  display: none;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+main {
+  min-height: 100%;
+  padding-bottom: 2rem;
+}
+
+footer {
+  background-color: white;
+  position: sticky;
+  bottom: 0;
+}
