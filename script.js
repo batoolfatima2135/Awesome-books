@@ -51,3 +51,11 @@ function logSubmit(event) {
 document.querySelector('#submit-button').addEventListener('submit', (e) => logSubmit(e));
 const newBook = new BookList();
 newBook.displayBooks();
+
+//Getting date and time
+dateTime = document.getElementById('date');
+var currentDate = new Date();
+var date = currentDate.toDateString();
+var time = currentDate.toLocaleTimeString();
+dateTime.innerHTML = date +" " + time
+
