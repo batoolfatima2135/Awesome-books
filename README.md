@@ -69,7 +69,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://batoolfatima2135.github.io/Awesome-books/)
+- [Live Demo Link](https://batoolfatima2135.github.io/Awesome-books-modules/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

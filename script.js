@@ -40,6 +40,15 @@ const newBook = new BookList();
 function logSubmit(event) {
   const bookTitle = document.querySelector('#book-title').value;
   const bookAuthor = document.querySelector('#book-author').value;
+  if(book === '' || bookAuthor === '')
+  {
+    const errordiv = document.createElement('div');
+    const error = document.createElement('p');
+    error.className = 'style';
+    errordiv.appendChild(error);
+    error.textContent = "Please fill all fields";
+
+  }
   newBook.addBooks(bookTitle, bookAuthor);
   newBook.displayBooks();
   document.querySelector('#book-title').value = '';
